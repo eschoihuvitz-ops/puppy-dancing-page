@@ -23,10 +23,7 @@
 
 /* 춤추는 애니메이션 */
 .puppy-container.dancing .puppy {
-  animation: 
-    dance-bounce 0.6s ease-in-out infinite;
-    dance-rotate 1.2s ease-in-out infinite;
-    dance-sway 1.8s ease-in-out infinite;
+  animation: dance-bounce-rotate 1.2s ease-in-out infinite;
 }
 
 /* 정지 상태 */
@@ -34,7 +31,23 @@
   animation: none;
 }
 
-/* 점프 애니메이션 */
+/* 점프 + 회전 결합 애니메이션 */
+@keyframes dance-bounce-rotate {
+  0%, 100% {
+    transform: translateY(0) scale(1) rotate(0deg);
+  }
+  25% {
+    transform: translateY(-30px) scale(1.5) rotate(-10deg);
+  }
+  50% {
+    transform: translateY(-60px) scale(2) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-30px) scale(1.5) rotate(10deg);
+  }
+}
+
+/* 점프 애니메이션 (예비) */
 @keyframes dance-bounce {
   0%, 100% {
     transform: translateY(0) scale(1);
@@ -44,7 +57,7 @@
   }
 }
 
-/* 회전 애니메이션 */
+/* 회전 애니메이션 (예비) */
 @keyframes dance-rotate {
   0%, 100% {
     transform: rotate(0deg);
@@ -113,12 +126,18 @@
     font-size: 1rem;
   }
 
-  @keyframes dance-bounce {
+  @keyframes dance-bounce-rotate {
     0%, 100% {
-      transform: translateY(0) scale(1);
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-10px) scale(1.03) rotate(-10deg);
     }
     50% {
-      transform: translateY(-20px) scale(1.05);
+      transform: translateY(-20px) scale(1.05) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-10px) scale(1.03) rotate(10deg);
     }
   }
 
@@ -160,12 +179,18 @@
     font-size: 1.3rem;
   }
 
-  @keyframes dance-bounce {
+  @keyframes dance-bounce-rotate {
     0%, 100% {
-      transform: translateY(0) scale(1);
+      transform: translateY(0) scale(1) rotate(0deg);
+    }
+    25% {
+      transform: translateY(-20px) scale(1.03) rotate(-20deg);
     }
     50% {
-      transform: translateY(-40px) scale(1.05);
+      transform: translateY(-40px) scale(1.05) rotate(0deg);
+    }
+    75% {
+      transform: translateY(-20px) scale(1.03) rotate(20deg);
     }
   }
 }
