@@ -23,7 +23,10 @@
 
 /* 춤추는 애니메이션 */
 .puppy-container.dancing .puppy {
-  animation: dance-bounce 1.2s ease-in-out infinite;
+  animation: 
+    dance-bounce 0.6s ease-in-out infinite;
+    dance-rotate 1.2s ease-in-out infinite;
+    dance-sway 1.8s ease-in-out infinite;
 }
 
 /* 정지 상태 */
