@@ -1,0 +1,62 @@
+.app {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+h1 {
+  color: white;
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+}
+
+/* 반응형 디자인 - 모바일 */
+@media (max-width: 768px) {
+  .app {
+    padding: 1rem;
+  }
+
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .container {
+    min-height: 300px;
+  }
+}
+
+/* 반응형 디자인 - 태블릿 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  h1 {
+    font-size: 2.5rem;
+  }
+
+  .container {
+    min-height: 350px;
+  }
+}
+
+/* 반응형 디자인 - 대형 화면 */
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 3.5rem;
+    margin-bottom: 3rem;
+  }
+
+  .container {
+    min-height: 500px;
+  }
+}
